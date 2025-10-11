@@ -80,7 +80,7 @@ p1+coord_cartesian(x=c(-6,6))
 
 # Number of accepted values
 ar = df_sim%>%
-  select(type)%>%
+  dplyr::select(type)%>%
   group_by(type)%>%
   count()%>%
   mutate(acc=case_when(type==1~'Accepted',
